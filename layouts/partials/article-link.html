@@ -69,6 +69,11 @@
       <div class="py-1 prose dark:prose-invert">
         {{ .Summary | emojify }}
       </div>
+      {{ else if .Site.Params.list.showDescription}}
+      <div class="py-1 prose dark:prose-invert">
+        {{ .Description | emojify }}
+      </div>
+
     {{ end }}
   </div>
 </article>
