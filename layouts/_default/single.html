@@ -47,6 +47,11 @@
       {{ end }}
       <div class="min-w-0 min-h-0 max-w-prose grow">
         {{ .Content | emojify }}
+
+	{{- if (.Param "showRelated") }}
+  {{- partial "related.html" . }}
+  {{- end }}
+
       </div>
     </section>
     <footer class="pt-8 max-w-prose print:hidden">
